@@ -7,12 +7,13 @@ const Heading: FC<BoxProps> = ({
   fontWeight = 700,
   fontSize = "45px",
   lineHeight = "normal",
+  color = mainColor.primary,
   ...other
 }) => {
   return (
     <Box
       {...other}
-      color={mainColor.primary}
+      color={color}
       fontWeight={fontWeight}
       fontSize={fontSize}
       lineHeight={lineHeight}

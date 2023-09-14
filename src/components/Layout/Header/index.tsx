@@ -6,20 +6,19 @@ import { mainColor } from "theme/common/color";
 const Header: FC = () => {
   return (
     <Box
-      // position="sticky"
       zIndex={999}
       top={0}
       left={0}
       bg={mainColor.secondary}
       display="flex"
       justifyContent="space-between"
-      px={16}
+      px={{ md: 16, sm: 6 }}
     >
-      <Box>
-        <img src={gameLoftLogoBlack} />{" "}
+      <Box ml={-5} width={112}>
+        <img src={gameLoftLogoBlack} />
       </Box>
       <Box display="flex">
-        <img src={hamburgerIcon} />
+        <img src={hamburgerIcon} width={32} />
       </Box>
     </Box>
   );

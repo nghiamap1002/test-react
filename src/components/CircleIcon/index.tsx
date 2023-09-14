@@ -3,11 +3,11 @@ import { FC } from "react";
 import { mainColor } from "theme/theme";
 
 type CircleIconProps = {
-  children: any;
+  icon: any;
 } & BoxProps;
 
 const CircleIcon: FC<CircleIconProps> = ({
-  children,
+  icon,
   bg = mainColor.white,
   display = "flex",
   justifyContent = "center",
@@ -25,7 +25,7 @@ const CircleIcon: FC<CircleIconProps> = ({
       alignItems={alignItems}
       p={2}
     >
-      {children}
+      {icon}
     </Box>
   );
 };

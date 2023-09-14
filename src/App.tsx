@@ -4,7 +4,7 @@ import Header from "components/Layout/Header";
 import "./App.css";
 import Community from "components/Section/Conmunity";
 import Register from "components/Section/Register";
-import Event from "components/Section/Event";
+import SpecialEvent from "components/Section/SpecialEvent";
 import ExclusiveContent from "components/Section/ExclusiveContent";
 import Footer from "components/Layout/Footer";
 
@@ -15,7 +15,7 @@ function App() {
       <Banner />
       <Register />
       <Community />
-      <Event />
+      <SpecialEvent />
       <ExclusiveContent />
       <Footer />
     </Box>

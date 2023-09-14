@@ -13,15 +13,9 @@ const SocialSection: FC = () => {
       zIndex={9999999}
     >
       <Box display="flex" flexDirection="column" mr={4} gap={2}>
-        <CircleIcon>
-          <img src={shareIcon} />
-        </CircleIcon>
-        <CircleIcon bg={mainColor.white}>
-          <img src={mailIcon} />
-        </CircleIcon>
-        <CircleIcon bg={mainColor.white}>
-          <img src={supportIcon} />
-        </CircleIcon>
+        <CircleIcon icon={<img src={shareIcon} />} />
+        <CircleIcon bg={mainColor.white} icon={<img src={mailIcon} />} />
+        <CircleIcon bg={mainColor.white} icon={<img src={supportIcon} />} />
       </Box>
     </Box>
   );

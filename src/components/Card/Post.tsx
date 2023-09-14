@@ -17,9 +17,7 @@ const Post: FC = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <img src={facebookIcon} />
         <Box>
-          <CircleIcon>
-            <img src={shareBlack} />
-          </CircleIcon>
+          <CircleIcon icon={<img src={shareBlack} />} />
         </Box>
       </Box>
       <Box my={16} display="flex" justifyContent="center" alignItems="center">

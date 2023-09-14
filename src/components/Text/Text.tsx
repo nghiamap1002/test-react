@@ -7,12 +7,13 @@ const Text: FC<BoxProps> = ({
   fontWeight = 500,
   fontSize = "10px",
   lineHeight = "normal",
+  color = mainColor.primary,
   ...other
 }) => {
   return (
     <Box
       {...other}
-      color={mainColor.primary}
+      color={color}
       fontWeight={fontWeight}
       fontSize={fontSize}
       lineHeight={lineHeight}

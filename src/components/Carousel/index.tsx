@@ -1,6 +1,6 @@
 import { Box } from "@chakra-ui/react";
 import { nextIcon, preIcon } from "assets";
-import { FC, useRef, useState } from "react";
+import { FC, useEffect, useRef, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/grid";
@@ -20,8 +20,10 @@ const Carousel: FC<ICarousel> = ({ children, ...rest }) => {
   return (
     <>
       <Swiper
+        loop={true}
         ref={sliderRef}
         {...rest}
+        // {...params}
         navigation={{
           nextEl: navigationNextRef?.current,
           prevEl: navigationPrevRef?.current,

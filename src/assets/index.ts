@@ -8,6 +8,7 @@ import cat4 from "assets/image/cat4.svg";
 import cat5 from "assets/image/cat5.svg";
 import cat6 from "assets/image/cat6.svg";
 import cat1 from "assets/image/cat1.svg";
+import bgBlue from "assets/image/bg_blue.svg";
 
 import gameLoftLogoBlack from "assets/icon/gameloft_logo_black.svg";
 import hamburgerIcon from "assets/icon/hamburger.svg";
@@ -31,6 +32,7 @@ import facebookNoBg from "assets/icon/facebook_no_bg.svg";
 import linkedinIcon from "assets/icon/linkedin.svg";
 import twitterBlue from "assets/icon/twitter_blue.svg";
 import ytbIcon from "assets/icon/ytb.svg";
+import web from "assets/icon/Web.svg";
 
 export {
   gameLoftLogoBlack,
@@ -65,4 +67,6 @@ export {
   linkedinIcon,
   twitterBlue,
   ytbIcon,
+  web,
+  bgBlue,
 };
