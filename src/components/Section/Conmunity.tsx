@@ -21,12 +21,12 @@ import {
 } from "assets";
 import Carousel from "components/Carousel";
 import Category from "components/Category";
-import Post from "components/Post";
 import { FC } from "react";
 import { Pagination } from "swiper";
 import { SwiperSlide } from "swiper/react";
 import { mainColor } from "theme/theme";
 import { Swiper } from "swiper/react";
+import Post from "components/Card/Post";
 
 const Community: FC = () => {
   const arrayCat = [
@@ -124,7 +124,12 @@ const Community: FC = () => {
         </Box>
       </Container>
       <Box position="relative">
-        <Carousel slidesPerView={5.6} spaceBetween={20} centeredSlides>
+        <Carousel
+          slidesPerView={5.6}
+          spaceBetween={20}
+          centeredSlides
+          initialSlide={3}
+        >
           {arrayCat.map((item, index) => (
             <SwiperSlide key={index}>
               <Post />

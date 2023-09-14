@@ -1,9 +1,12 @@
 import { Box } from "@chakra-ui/react";
-import Banner from "components/Banner";
+import Banner from "components/Section/Banner";
 import Header from "components/Layout/Header";
-import Register from "components/Register";
 import "./App.css";
-import Community from "components/Community";
+import Community from "components/Section/Conmunity";
+import Register from "components/Section/Register";
+import Event from "components/Section/Event";
+import ExclusiveContent from "components/Section/ExclusiveContent";
+import Footer from "components/Layout/Footer";
 
 function App() {
   return (
@@ -12,6 +15,9 @@ function App() {
       <Banner />
       <Register />
       <Community />
+      <Event />
+      <ExclusiveContent />
+      <Footer />
     </Box>
   );
 }

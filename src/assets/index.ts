@@ -25,9 +25,16 @@ import facebookIcon from "assets/icon/facebook.svg";
 import twitterIcon from "assets/icon/twitter.svg";
 import searchIcon from "assets/icon/Search.svg";
 import shareBlack from "assets/icon/share_black.svg";
+import downloadIcon from "assets/icon/download.svg";
+import gameLoftLogo from "assets/icon/gameloft_Logo_Flat_White_Line.svg";
+import facebookNoBg from "assets/icon/facebook_no_bg.svg";
+import linkedinIcon from "assets/icon/linkedin.svg";
+import twitterBlue from "assets/icon/twitter_blue.svg";
+import ytbIcon from "assets/icon/ytb.svg";
 
 export {
   gameLoftLogoBlack,
+  gameLoftLogo,
   hamburgerIcon,
   mountain,
   microsoft,
@@ -38,6 +45,7 @@ export {
   mailIcon,
   shareIcon,
   supportIcon,
+  downloadIcon,
   minion,
   cat2,
   cat1,
@@ -53,4 +61,8 @@ export {
   twitterIcon,
   shareBlack,
   mountain2,
+  facebookNoBg,
+  linkedinIcon,
+  twitterBlue,
+  ytbIcon,
 };

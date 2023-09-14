@@ -1,6 +1,7 @@
+import { defineStyleConfig } from "@chakra-ui/react";
 import { mainColor } from "theme/theme";
 
-export const Input = {
+export const Input = defineStyleConfig({
   baseStyle: {
     // control: {
     // borderColor: mainColor.primary, // change the border radius of the control
@@ -9,6 +10,9 @@ export const Input = {
     // },
     field: {
       borderColor: mainColor.primary, // change the border radius of the control
+      _placeholder: {
+        color: mainColor.primary,
+      },
     },
     // control: {
     borderColor: mainColor.primary, // change the border radius of the control
@@ -16,4 +20,4 @@ export const Input = {
     //   backgroundColor: mainColor.white,
     // },
   },
-};
+});
