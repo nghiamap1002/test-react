@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { gameLoftLogoBlack, hamburgerIcon } from "assets";
 import { FC } from "react";
 import { mainColor } from "theme/common/color";
@@ -12,13 +12,13 @@ const Header: FC = () => {
       bg={mainColor.secondary}
       display="flex"
       justifyContent="space-between"
-      px={{ md: 16, sm: 6 }}
+      px={{ md: 16, sm: 8 }}
     >
-      <Box ml={-5} width={112}>
-        <img src={gameLoftLogoBlack} />
+      <Box ml={-5}>
+        <Image src={gameLoftLogoBlack} w={{ sm: 112, lg: "auto" }} />
       </Box>
       <Box display="flex">
-        <img src={hamburgerIcon} width={32} />
+        <Image src={hamburgerIcon} w={{ sm: 8, lg: "auto" }} />
       </Box>
     </Box>
   );

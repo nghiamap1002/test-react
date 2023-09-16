@@ -5,9 +5,9 @@ import { mainColor } from "theme/theme";
 const Heading: FC<BoxProps> = ({
   content,
   fontWeight = 700,
-  fontSize = "45px",
+  fontSize = { lg: "45px", sm: "25px" },
   lineHeight = "normal",
-  color = mainColor.primary,
+  color = mainColor.white,
   ...other
 }) => {
   return (

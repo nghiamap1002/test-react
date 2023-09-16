@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
-import { downloadIcon, facebookIcon, mountain2, shareBlack } from "assets";
+import { Box, Image } from "@chakra-ui/react";
+import { downloadBlue, downloadIcon } from "assets";
 import CircleIcon from "components/CircleIcon";
 import { FC, useRef } from "react";
 import { mainColor } from "theme/theme";
@@ -34,17 +34,24 @@ const GameContent: FC = () => {
       bgRepeat="no-repeat"
     >
       <Box display="flex" justifyContent="end" alignItems="center">
-        <Box
+        <CircleIcon
+          bg={mainColor.white}
+          icon={<Image src={downloadIcon} />}
+          iconHover={<Image src={downloadBlue} />}
+          position="absolute"
+          top={"5%"}
+          onClick={() => download(imageRef)}
+          right={"5%"}
+          noBg
+        />
+        {/* <CircleIcon 
           boxShadow="0px 1px 5px 0px rgba(0, 0, 0, 0.15)"
           borderRadius="50%"
           display="flex"
-          position="absolute"
-          top={10}
-          right={10}
-          onClick={() => download(imageRef)}
+        
         >
           <img src={downloadIcon} />
-        </Box>
+        </Ci> */}
       </Box>
       <Box display="flex" justifyContent="center" alignItems="center">
         <img src={"./cute_meow.png"} ref={imageRef} />

@@ -33,6 +33,13 @@ import linkedinIcon from "assets/icon/linkedin.svg";
 import twitterBlue from "assets/icon/twitter_blue.svg";
 import ytbIcon from "assets/icon/ytb.svg";
 import web from "assets/icon/Web.svg";
+import facebookBgBlue from "assets/icon/facebook_bg_blue.svg";
+import linkedinBgBlue from "assets/icon/linkedin_bg_blue.svg";
+import twitterBgBlue from "assets/icon/twitter_bg_blue.svg";
+import ytbBgBlue from "assets/icon/ytb_bg_blue.svg";
+import supportBlue from "assets/icon/support_blue.svg";
+import mailBlue from "assets/icon/mail_blue.svg";
+import downloadBlue from "assets/icon/download_blue.svg";
 
 export {
   gameLoftLogoBlack,
@@ -69,4 +76,11 @@ export {
   ytbIcon,
   web,
   bgBlue,
+  facebookBgBlue,
+  linkedinBgBlue,
+  twitterBgBlue,
+  ytbBgBlue,
+  mailBlue,
+  supportBlue,
+  downloadBlue,
 };

@@ -1,13 +1,14 @@
 import { Box, BoxProps, Container } from "@chakra-ui/react";
 import { FC } from "react";
 import { mainColor } from "theme/theme";
+import { isMobile } from "utils";
 
 const SubHeading: FC<BoxProps> = ({
   content,
   fontWeight = 400,
-  fontSize = "25px",
+  fontSize = isMobile ? "20px" : "25px",
   lineHeight = "normal",
-  color = mainColor.primary,
+  color = mainColor.white,
   ...other
 }) => {
   return (

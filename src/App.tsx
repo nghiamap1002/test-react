@@ -1,23 +1,36 @@
 import { Box } from "@chakra-ui/react";
-import Banner from "components/Section/Banner";
+import Footer from "components/Layout/Footer";
 import Header from "components/Layout/Header";
-import "./App.css";
+import Banner from "components/Section/Banner";
 import Community from "components/Section/Conmunity";
+import ExclusiveContent from "components/Section/ExclusiveContent";
 import Register from "components/Section/Register";
 import SpecialEvent from "components/Section/SpecialEvent";
-import ExclusiveContent from "components/Section/ExclusiveContent";
-import Footer from "components/Layout/Footer";
+import "./App.css";
+import Animation from "components/Animation";
 
 function App() {
   return (
     <Box position="relative">
       <Header />
       <Banner />
-      <Register />
-      <Community />
-      <SpecialEvent />
-      <ExclusiveContent />
-      <Footer />
+      <Animation>
+        <Register />
+      </Animation>
+      <Animation>
+        <Community />
+      </Animation>
+      <Animation>
+        <SpecialEvent />
+      </Animation>
+
+      <Animation>
+        <ExclusiveContent />
+      </Animation>
+
+      <Animation>
+        <Footer />
+      </Animation>
     </Box>
   );
 }

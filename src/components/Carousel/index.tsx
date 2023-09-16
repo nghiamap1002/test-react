@@ -1,4 +1,4 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Image } from "@chakra-ui/react";
 import { nextIcon, preIcon } from "assets";
 import { FC, useEffect, useRef, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
@@ -11,16 +11,19 @@ import { Swiper } from "swiper/react";
 import { ICarousel } from "./Carousel";
 
 const Carousel: FC<ICarousel> = ({ children, ...rest }) => {
-  const { customeArrow } = rest;
+  const { arrowLeft, arrowRight, pagination } = rest;
 
   const navigationPrevRef: any = useRef(null);
   const navigationNextRef: any = useRef(null);
   const sliderRef = useRef<any>(null);
 
+  const returnIndex = (index: number) => {
+    return index < 10 ? (index === 0 ? 0 : `0${index}`) : index;
+  };
+
   return (
     <>
       <Swiper
-        loop={true}
         ref={sliderRef}
         {...rest}
         // {...params}
@@ -28,6 +31,22 @@ const Carousel: FC<ICarousel> = ({ children, ...rest }) => {
           nextEl: navigationNextRef?.current,
           prevEl: navigationPrevRef?.current,
         }}
+        pagination={
+          pagination && {
+            clickable: true,
+            renderBullet: function (index, className) {
+              return (
+                '<span class="' +
+                className +
+                '">' +
+                '<div class="content">' +
+                returnIndex(index) +
+                "</div>" +
+                "</span>"
+              );
+            },
+          }
+        }
         onBeforeInit={(swiper: any) => {
           swiper.params.navigation.prevEl = navigationPrevRef?.current;
           swiper.params.navigation.nextEl = navigationNextRef?.current;
@@ -39,46 +58,40 @@ const Carousel: FC<ICarousel> = ({ children, ...rest }) => {
       >
         {children}
       </Swiper>
-      {customeArrow && (
-        <>
-          <Box
-            onClick={() => {
-              if (!sliderRef?.current) return;
-              sliderRef.current?.swiper?.slidePrev();
-            }}
-            cursor={
-              sliderRef?.current?.swiper?.isBeginning
-                ? "not-allowed"
-                : "pointer"
-            }
-            position="absolute"
-            transform="translateY(-50%)"
-            top="45%"
-            left={0}
-            zIndex={99999}
-            borderRadius="50%"
-            fontSize="6rem"
-          >
-            <img src={preIcon} />
-          </Box>
-          <Box
-            onClick={() => {
-              if (!sliderRef?.current) return;
-              sliderRef.current?.swiper?.slideNext();
-            }}
-            cursor={
-              sliderRef?.current?.swiper?.isEnd ? "pointer" : "not-allowed"
-            }
-            position="absolute"
-            transform="translateY(-50%)"
-            top="45%"
-            right={0}
-            fontSize="4rem"
-            zIndex={99999}
-          >
-            <img src={nextIcon} />
-          </Box>
-        </>
+      {arrowLeft && (
+        <Box
+          onClick={() => {
+            if (!sliderRef?.current) return;
+            sliderRef.current?.swiper?.slidePrev();
+          }}
+          cursor={
+            sliderRef?.current?.swiper?.isBeginning ? "pointer" : "not-allowed"
+          }
+          position="absolute"
+          transform="translateY(-50%)"
+          top="40%"
+          left={0}
+          zIndex={99999}
+          borderRadius="50%"
+        >
+          <Image src={preIcon} w={{ lg: "auto", sm: 4 }} />
+        </Box>
+      )}
+      {arrowRight && (
+        <Box
+          onClick={() => {
+            if (!sliderRef?.current) return;
+            sliderRef.current?.swiper?.slideNext();
+          }}
+          cursor={sliderRef?.current?.swiper?.isEnd ? "not-allowed" : "pointer"}
+          position="absolute"
+          transform="translateY(-50%)"
+          top="40%"
+          right={0}
+          zIndex={99999}
+        >
+          <Image src={nextIcon} w={{ lg: "auto", sm: 4 }} />
+        </Box>
       )}
     </>
   );

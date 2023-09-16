@@ -1,5 +1,5 @@
-import { Box } from "@chakra-ui/react";
-import { facebookIcon, mountain2, shareBlack } from "assets";
+import { Box, Image } from "@chakra-ui/react";
+import { facebookIcon, mountain2, shareBlack, shareIcon } from "assets";
 import CircleIcon from "components/CircleIcon";
 import { FC } from "react";
 import { mainColor } from "theme/theme";
@@ -17,7 +17,10 @@ const Post: FC = () => {
       <Box display="flex" justifyContent="space-between" alignItems="center">
         <img src={facebookIcon} />
         <Box>
-          <CircleIcon icon={<img src={shareBlack} />} />
+          <CircleIcon
+            icon={<Image src={shareBlack} />}
+            iconHover={<Image src={shareIcon} />}
+          />
         </Box>
       </Box>
       <Box my={16} display="flex" justifyContent="center" alignItems="center">

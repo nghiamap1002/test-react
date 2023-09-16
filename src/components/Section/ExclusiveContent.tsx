@@ -6,22 +6,31 @@ import SubHeading from "components/Text/SubHeading";
 import { FC } from "react";
 import { SwiperSlide } from "swiper/react";
 import { mainColor } from "theme/theme";
+import { isMobile } from "utils";
 
 const ExclusiveContent: FC = () => {
   return (
-    <Box my={28}>
+    <Box my={12}>
       <Container maxW="container.lg" my={12} mb={12}>
         <Box color={mainColor.primary}>
-          <Heading content="Exclusive Game Content" mb={2} />
+          <Heading
+            content="Exclusive Game Content"
+            mb={2}
+            color={mainColor.primary}
+          />
           <SubHeading
-            content="Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-            nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam
-            erat, sed diam"
+            content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+            color={mainColor.primary}
           />
         </Box>
       </Container>
-      <Box position="relative">
-        <Carousel slidesPerView={3} spaceBetween={50}>
+      <Box position="relative" mb={20}>
+        <Carousel
+          slidesPerView={isMobile ? 1.2 : 3}
+          spaceBetween={isMobile ? 10 : 50}
+          centeredSlides
+          initialSlide={2}
+        >
           {Array(12)
             .fill(null)
             .map((item, index) => (

@@ -53,3 +53,24 @@
   justify-content: center;
   align-items: center;
 }
+
+
+.swiper-pagination-bullet{
+  height: auto;
+  width: auto;
+  font-size: 15px;
+  background: transparent !important;
+  color: #2699fb;
+  clip: rect(0px, 50px, 50px, 25px);
+}
+.swiper-pagination-bullet .content{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  width: 2rem;
+}
+
+/* .swiper-pagination-bullet-active{
+  color: #2699fb;
+} */
